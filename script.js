@@ -13,7 +13,7 @@ const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
 
 //cria ordem de cores
-let shufflerOrder = () => {
+let shuffleOrder = () => {
     let colorOrder = Math.floor(Math.random()*4);
     order[order.length] = colorOrder;
     clickedOrder = [];
@@ -37,7 +37,7 @@ let lightColor = (element, number) => {
 
 //checa se os botões criados são os mesmo da ordem gerada no shuffle
 let checkOrder = () => {
-    for(let i in cickedOrder) {
+    for(let i in clickedOrder) {
         if(clickedOrder[i] != order[i]){
             gameOver();
             break;
